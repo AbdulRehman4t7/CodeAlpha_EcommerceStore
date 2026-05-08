@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | CodeAlpha Store</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="checkout">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/index.html"><span class="brand-mark">CA</span><span>CodeAlpha Store</span></a>
+      <div class="nav-links" id="navLinks"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Checkout</h1>
+    <div id="checkoutMessage" style="margin-top:14px"></div>
+    <div class="layout-two" style="margin-top:18px">
+      <form class="panel stack" id="checkoutForm">
+        <div class="form-grid">
+          <label>Full name <input name="fullName" required minlength="2"></label>
+          <label>Phone <input name="phone" required minlength="6"></label>
+          <label>City <input name="city" required minlength="2"></label>
+          <label>Postal code <input name="postalCode" required minlength="2"></label>
+        </div>
+        <label>Address <textarea name="address" required minlength="5"></textarea></label>
+        <label>Country <input name="country" required minlength="2" value="Pakistan"></label>
+        <button class="btn" type="submit">Place Order</button>
+      </form>
+      <aside class="panel stack">
+        <h2>Order Summary</h2>
+        <div id="checkoutSummary"></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">Orders reduce inventory and clear the cart.</footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | CodeAlpha Store</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/index.html"><span class="brand-mark">CA</span><span>CodeAlpha Store</span></a>
+      <div class="nav-links" id="navLinks"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Admin Panel</h1>
+    <div id="adminMessage" style="margin-top:14px"></div>
+    <div class="layout-two" style="margin-top:18px">
+      <form class="panel stack" id="productForm" enctype="multipart/form-data">
+        <h2>Product Manager</h2>
+        <input type="hidden" name="productId">
+        <label>Name <input name="name" required minlength="2"></label>
+        <label>Description <textarea name="description" required minlength="10"></textarea></label>
+        <div class="form-grid">
+          <label>Price <input name="price" type="number" min="0" step="0.01" required></label>
+          <label>Stock <input name="stock" type="number" min="0" step="1" required></label>
+        </div>
+        <label>Category <input name="category" required minlength="2"></label>
+        <label>Image URLs <input name="imagesText" placeholder="https://example.com/image.jpg"></label>
+        <label>Upload product images <input name="productImages" type="file" accept="image/*" multiple></label>
+        <div class="row">
+          <button class="btn" id="productSubmit" type="submit">Save Product</button>
+          <button class="btn secondary" id="resetProductForm" type="button">Reset</button>
+        </div>
+      </form>
+      <section class="stack">
+        <div class="panel stack">
+          <div class="row">
+            <h2>Products</h2>
+            <select id="adminCategoryFilter"></select>
+          </div>
+          <div id="adminProducts"></div>
+        </div>
+      </section>
+    </div>
+    <section class="panel stack" style="margin-top:22px">
+      <h2>All Orders</h2>
+      <div id="adminOrders"></div>
+    </section>
+  </main>
+
+  <footer class="footer">Role-based admin tools for catalog and order operations.</footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>

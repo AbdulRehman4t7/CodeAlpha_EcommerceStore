@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | CodeAlpha Store</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="products">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/index.html"><span class="brand-mark">CA</span><span>CodeAlpha Store</span></a>
+      <div class="nav-links" id="navLinks"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section-head">
+      <div>
+        <h1 class="page-title">Products</h1>
+        <p id="productMeta" class="muted">Browse the catalog.</p>
+      </div>
+    </div>
+    <div id="pageMessage"></div>
+    <form class="filters" id="filterForm">
+      <input name="search" type="search" placeholder="Search products">
+      <select name="category" id="category"></select>
+      <input name="minPrice" type="number" min="0" step="0.01" placeholder="Min price">
+      <input name="maxPrice" type="number" min="0" step="0.01" placeholder="Max price">
+      <select name="sort">
+        <option value="newest">Newest</option>
+        <option value="priceAsc">Price: low to high</option>
+        <option value="priceDesc">Price: high to low</option>
+        <option value="rating">Top rated</option>
+      </select>
+      <input id="pageInput" name="page" type="hidden" value="1">
+      <button class="btn" type="submit">Apply Filters</button>
+    </form>
+    <div class="grid" id="productsGrid"></div>
+    <div class="row" style="margin-top:18px">
+      <button class="btn secondary" id="prevPage">Previous</button>
+      <button class="btn secondary" id="nextPage">Next</button>
+    </div>
+  </main>
+
+  <footer class="footer">Secure API-powered shopping catalog.</footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>

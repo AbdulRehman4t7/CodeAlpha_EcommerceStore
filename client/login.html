@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | CodeAlpha Store</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="auth">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/index.html"><span class="brand-mark">CA</span><span>CodeAlpha Store</span></a>
+      <div class="nav-links" id="navLinks"></div>
+    </nav>
+  </header>
+
+  <main class="auth-wrap">
+    <form class="panel stack" id="loginForm">
+      <h1 class="page-title">Login</h1>
+      <div id="loginMessage"></div>
+      <label>Email <input name="email" type="email" required></label>
+      <label>Password <input name="password" type="password" required minlength="6"></label>
+      <button class="btn" type="submit">Login</button>
+      <p class="muted">Admin demo: admin@codealpha.dev / Admin123!</p>
+    </form>
+    <form class="panel stack" id="registerForm">
+      <h1 class="page-title">Register</h1>
+      <div id="registerMessage"></div>
+      <label>Name <input name="name" required minlength="2"></label>
+      <label>Email <input name="email" type="email" required></label>
+      <label>Password <input name="password" type="password" required minlength="6"></label>
+      <button class="btn" type="submit">Create Account</button>
+    </form>
+  </main>
+
+  <footer class="footer">JWT authentication with bcrypt password hashing.</footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>

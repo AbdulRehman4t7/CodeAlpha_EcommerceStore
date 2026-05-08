@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | CodeAlpha Store</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="dashboard">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/index.html"><span class="brand-mark">CA</span><span>CodeAlpha Store</span></a>
+      <div class="nav-links" id="navLinks"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">User Dashboard</h1>
+    <div id="pageMessage"></div>
+    <div class="layout-two" style="margin-top:18px">
+      <section class="stack">
+        <form class="panel stack" id="profileForm">
+          <h2>Profile</h2>
+          <div id="profileMessage"></div>
+          <label>Name <input id="profileName" name="name" required minlength="2"></label>
+          <label>Email <input id="profileEmail" name="email" type="email" required></label>
+          <button class="btn" type="submit">Update Profile</button>
+        </form>
+        <form class="panel stack" id="passwordForm">
+          <h2>Change Password</h2>
+          <div id="passwordMessage"></div>
+          <label>Current password <input name="currentPassword" type="password" required minlength="6"></label>
+          <label>New password <input name="newPassword" type="password" required minlength="6"></label>
+          <button class="btn secondary" type="submit">Change Password</button>
+        </form>
+      </section>
+      <section class="stack">
+        <h2>Order History</h2>
+        <div id="orderHistory" class="stack"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">Protected customer account area.</footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>
